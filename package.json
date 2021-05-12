@@ -1,0 +1,21 @@
+{
+  "name": "test-cf-migrations",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "cf:init": "cf-migrations init",
+    "cf:create": "cf-migrations create",
+    "cf:deploy": "ts-node node_modules/.bin/cf-migrations deploy",
+    "cf:release": "ts-node node_modules/.bin/cf-migrations release"
+  },
+  "dependencies": {
+    "cf-migrations": "^1.0.3",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
