@@ -6,8 +6,8 @@
   "scripts": {
     "cf:init": "cf-migrations init",
     "cf:create": "cf-migrations create",
-    "cf:deploy": "ts-node node_modules/.bin/cf-migrations deploy",
-    "cf:release": "ts-node node_modules/.bin/cf-migrations release"
+    "cf:deploy": "ts-node node_modules/cf-migrations/bin/cf-migrations deploy",
+    "cf:release": "ts-node node_modules/cf-migrations/bin/cf-migrations release"
   },
   "dependencies": {
     "cf-migrations": "^1.0.4",
