@@ -1,0 +1,21 @@
+name: deploy-contentful-migrations
+
+on: pull_request
+
+env:
+  MIGRATIONS_DIR: "migrations"
+  CONTENTFUL_ENVIRONMENT_ID: "master"
+  CONTENTFUL_LOCALE: "de-DE"
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_MANAGEMENT_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14.x
+      - uses: bahmutov/npm-install@v1
+      - run: yarn cf:deploy
