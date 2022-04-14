@@ -10,7 +10,7 @@
     "cf:release": "ts-node node_modules/cf-migrations/bin/cf-migrations release"
   },
   "dependencies": {
-    "cf-migrations": "^1.0.4",
+    "cf-migrations": "^2.0.0",
     "ts-node": "^9.1.1"
   },
   "devDependencies": {
